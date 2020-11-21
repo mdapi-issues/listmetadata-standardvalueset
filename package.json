@@ -1,10 +1,10 @@
 {
-  "name": "PROJECT_NAME",
-  "description": "Minimal working example to demonstrate a bug in DESCRIPTION",
+  "name": "listmetadata-standardvalueset",
+  "description": "Minimal working example to demonstrate a bug in listMetadata where queries for StandardValueSet return no results",
   "private": true,
   "version": "0.0.0-development",
   "author": "Matthias Rolke @amtrack",
-  "bugs": "https://github.com/mdapi-issues/PROJECT_NAME/issues",
+  "bugs": "https://github.com/mdapi-issues/listmetadata-standardvalueset/issues",
   "dependencies": {
     "@salesforce/command": "3.0.5",
     "@salesforce/core": "2.15.2",
@@ -21,6 +21,7 @@
     "eslint": "7.13.0",
     "eslint-config-prettier": "6.15.0",
     "mocha": "8.2.1",
+    "node-fetch": "^2.6.1",
     "prettier": "2.2.0",
     "sfdx-cli": "7.81.0",
     "ts-node": "9.0.0",
@@ -30,7 +31,7 @@
     "node": ">=8.0.0"
   },
   "files": [],
-  "homepage": "https://github.com/mdapi-issues/PROJECT_NAME",
+  "homepage": "https://github.com/mdapi-issues/listmetadata-standardvalueset",
   "keywords": [
     "salesforce",
     "mdapi-issue",
@@ -38,7 +39,7 @@
     "MWE"
   ],
   "license": "MIT",
-  "repository": "mdapi-issues/PROJECT_NAME",
+  "repository": "mdapi-issues/listmetadata-standardvalueset",
   "scripts": {
     "build": "rm -rf lib && tsc -b",
     "develop": "bash scripts/develop.sh",
