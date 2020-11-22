@@ -1,5 +1,5 @@
 {
-  "name": "listmetadata-standardvalueset",
+  "name": "@mdapi-issues/listmetadata-standardvalueset",
   "description": "Minimal working example to demonstrate a bug in listMetadata where queries for StandardValueSet return no results",
   "private": true,
   "version": "0.0.0-development",
@@ -27,7 +27,9 @@
   "engines": {
     "node": ">=8.0.0"
   },
-  "files": [],
+  "files": [
+    "/lib"
+  ],
   "homepage": "https://github.com/mdapi-issues/listmetadata-standardvalueset",
   "keywords": [
     "salesforce",
@@ -36,6 +38,7 @@
     "MWE"
   ],
   "license": "MIT",
+  "main": "/lib/workaround.js",
   "repository": "mdapi-issues/listmetadata-standardvalueset",
   "scripts": {
     "build": "rm -rf lib && tsc -b",
