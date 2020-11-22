@@ -26,6 +26,18 @@ sfdx force:mdapi:listmetadata -m StandardValueSet
 ```diff
 - undefined
 + [
-
+  {
+    createdById: '',
+    createdByName: '',
+    createdDate: '',
+    fileName: 'standardValueSets/LeadSource.standardValueSet',
+    fullName: 'LeadSource',
+    id: '',
+    lastModifiedById: '',
+    lastModifiedByName: '',
+    lastModifiedDate: '',
+    type: 'StandardValueSet'
+  },
+  ...
 ]
 ```
