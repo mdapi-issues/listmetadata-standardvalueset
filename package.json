@@ -1,7 +1,6 @@
 {
   "name": "@mdapi-issues/listmetadata-standardvalueset",
   "description": "Minimal working example to demonstrate a bug in listMetadata where queries for StandardValueSet return no results",
-  "private": true,
   "version": "0.0.0-development",
   "author": "Matthias Rolke @amtrack",
   "bugs": "https://github.com/mdapi-issues/listmetadata-standardvalueset/issues",
@@ -39,6 +38,14 @@
   ],
   "license": "MIT",
   "main": "/lib/workaround.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
   "repository": "mdapi-issues/listmetadata-standardvalueset",
   "scripts": {
     "build": "rm -rf lib && tsc -b",
