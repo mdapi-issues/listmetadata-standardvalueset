@@ -5,29 +5,15 @@ export default async function listStandardValueSets(
   conn: Connection
 ): Promise<Array<FileProperties>> {
   const availableStandardValueSetNames = [];
-  const customObjectNames = Object.keys(MAPPING).map(
-    (field) => field.split('.')[0]
+  let customFields = await conn.metadata.read(
+    'CustomField',
+    Object.keys(MAPPING)
   );
-  const uniqueCustomObjectNames = Array.from(new Set(customObjectNames));
-  const describeSObjectResults = {};
-  for (const customObject of uniqueCustomObjectNames) {
-    try {
-      describeSObjectResults[customObject] = await conn
-        .sobject(customObject)
-        .describe();
-    } catch (e) {
-      if (!/The requested resource does not exist/.test(e)) {
-        throw e;
-      }
-    }
+  if (!Array.isArray(customFields)) {
+    customFields = [customFields];
   }
   for (const [key, value] of Object.entries(MAPPING)) {
-    const [customObjectName, customFieldName] = key.split('.');
-    if (
-      describeSObjectResults[customObjectName]?.fields.find(
-        (field) => field.name === customFieldName
-      )
-    ) {
+    if (customFields.find((x) => x.fullName === key)) {
       availableStandardValueSetNames.push(value);
     }
   }

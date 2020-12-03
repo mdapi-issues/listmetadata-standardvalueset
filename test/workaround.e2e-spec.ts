@@ -3,8 +3,8 @@ import { expect } from 'chai';
 import listStandardValueSets from '../src/workaround';
 
 describe('workaround', function () {
-  this.slow(10000);
-  this.timeout(40000);
+  this.slow(5000);
+  this.timeout(20000);
   it('adds all available StandardValueSets', async () => {
     const org = await Org.create({});
     const conn = org.getConnection();
