@@ -1,7 +1,7 @@
 import type { Connection, FileProperties } from 'jsforce';
 import MAPPING from './mapping';
 
-export default async function listStandardValueSets(
+export async function listStandardValueSets(
   conn: Connection
 ): Promise<Array<FileProperties>> {
   const availableStandardValueSetNames = [];

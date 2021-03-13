@@ -1,6 +1,6 @@
 import { Org } from '@salesforce/core';
 import { expect } from 'chai';
-import listStandardValueSets from '../src/workaround';
+import { listStandardValueSets } from '../src/workaround';
 
 describe('workaround', function () {
   this.slow(5000);
