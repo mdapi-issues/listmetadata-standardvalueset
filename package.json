@@ -5,7 +5,7 @@
   "author": "Matthias Rolke @amtrack",
   "bugs": "https://github.com/mdapi-issues/listmetadata-standardvalueset/issues",
   "dependencies": {
-    "tslib": "2.1.0"
+    "tslib": "2.3.1"
   },
   "devDependencies": {
     "@types/chai": "4.2.16",
