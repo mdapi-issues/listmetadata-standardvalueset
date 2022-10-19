@@ -1,12 +1,13 @@
-import type { Connection, FileProperties } from 'jsforce';
-import MAPPING from './mapping';
+import type { Connection } from "@salesforce/core";
+import type { FileProperties } from "jsforce/api/metadata";
+import MAPPING from "./mapping";
 
 export async function listStandardValueSets(
   conn: Connection
 ): Promise<Array<FileProperties>> {
   const availableStandardValueSetNames = [];
   let customFields = await conn.metadata.read(
-    'CustomField',
+    "CustomField",
     Object.keys(MAPPING)
   );
   if (!Array.isArray(customFields)) {
@@ -22,9 +23,9 @@ export async function listStandardValueSets(
   );
   return uniqueStandardValueSetNames.map((standardValueSetName) => {
     return {
-      createdById: '',
-      createdByName: '',
-      createdDate: '',
+      createdById: "",
+      createdByName: "",
+      createdDate: "",
       fileName: `standardValueSets/${standardValueSetName}.standardValueSet`,
       fullName: standardValueSetName,
       // all StandardValueSets share the same id:
@@ -36,11 +37,11 @@ export async function listStandardValueSets(
       // 000000000000000AAA
       // 000000000000000AAA
       // Total number of records retrieved: 3.
-      id: '',
-      lastModifiedById: '',
-      lastModifiedByName: '',
-      lastModifiedDate: '',
-      type: 'StandardValueSet'
+      id: "",
+      lastModifiedById: "",
+      lastModifiedByName: "",
+      lastModifiedDate: "",
+      type: "StandardValueSet",
     };
   });
 }
