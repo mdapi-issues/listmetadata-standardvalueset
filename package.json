@@ -5,19 +5,11 @@
   "author": "Matthias Rolke @amtrack",
   "bugs": "https://github.com/mdapi-issues/listmetadata-standardvalueset/issues",
   "dependencies": {
-    "tslib": "2.4.0"
+    "tslib": "2.8.0"
   },
   "devDependencies": {
-    "@salesforce/core": "5.3.20",
-    "@types/chai": "4.3.10",
-    "@types/mocha": "10.0.4",
-    "chai": "4.3.10",
-    "mocha": "10.2.0",
-    "ts-node": "10.9.1",
-    "typescript": "5.2.2"
-  },
-  "engines": {
-    "node": ">=14.16"
+    "@salesforce/core": "8.6.3",
+    "@salesforce/dev-scripts": "10.2.10"
   },
   "files": [
     "/lib"
@@ -43,8 +35,8 @@
   "scripts": {
     "build": "rm -rf lib && tsc -b",
     "develop": "bash scripts/develop.sh",
-    "prepack": "yarn build",
-    "prepare": "yarn build",
+    "prepack": "npm run build",
+    "prepare": "npm run build",
     "test": "mocha --require ts-node/register \"test/**/*.test.ts\"",
     "test:e2e": "mocha --require ts-node/register \"test/**/*.e2e-spec.ts\""
   }

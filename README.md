@@ -9,13 +9,13 @@
 Create a scratch org
 
 ```console
-sfdx force:org:create -f config/project-scratch-def.json -s
+sf org create scratch -f config/project-scratch-def.json --set-default
 ```
 
 list StandardValueSets using `listMetadata`
 
 ```console
-sfdx force:mdapi:listmetadata -m StandardValueSet
+sf org list metadata --metadata-type StandardValueSet
 ```
 
 ```diff
