@@ -1,5 +1,5 @@
+import type { FileProperties } from "@jsforce/jsforce-node/lib/api/metadata.js";
 import type { Connection } from "@salesforce/core";
-import type { FileProperties } from "jsforce/api/metadata";
 import MAPPING from "./mapping";
 
 export async function listStandardValueSets(
@@ -29,7 +29,7 @@ export async function listStandardValueSets(
       fileName: `standardValueSets/${standardValueSetName}.standardValueSet`,
       fullName: standardValueSetName,
       // all StandardValueSets share the same id:
-      // $ sfdx force:data:soql:query -t -q "SELECT Id FROM StandardValueSet WHERE MasterLabel IN ('AccountRating', 'FiscalYearQuarterName', 'LeadSource')"
+      // $ sf data query -t -q "SELECT Id FROM StandardValueSet WHERE MasterLabel IN ('AccountRating', 'FiscalYearQuarterName', 'LeadSource')"
       // Querying Data... done
       // ID
       // ──────────────────
