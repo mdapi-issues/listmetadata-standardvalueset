@@ -1,5 +1,5 @@
 // https://developer.salesforce.com/docs/atlas.en-us.api_meta.meta/api_meta/standardvalueset_names.htm
-export default {
+export const MAPPING = {
   "AccountContactRelation.Roles": "AccountContactMultiRoles",
   "AccountContactRole.Role": "AccountContactRole",
   "Account.Ownership": "AccountOwnership",

@@ -1,6 +1,6 @@
 import type { FileProperties } from "@jsforce/jsforce-node/lib/api/metadata.js";
 import type { Connection } from "@salesforce/core";
-import MAPPING from "./mapping.js";
+import { MAPPING } from "./mapping.js";
 
 export async function listStandardValueSets(
   conn: Connection
