@@ -23,7 +23,7 @@
     "MWE"
   ],
   "license": "MIT",
-  "exports": "./lib/workaround.js",
+  "exports": "./lib/index.js",
   "publishConfig": {
     "access": "public"
   },
