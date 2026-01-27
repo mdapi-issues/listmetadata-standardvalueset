@@ -8,7 +8,10 @@
     "minimum-working-example",
     "MWE"
   ],
-  "repository": "mdapi-issues/listmetadata-standardvalueset",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdapi-issues/listmetadata-standardvalueset.git"
+  },
   "license": "MIT",
   "author": "Matthias Rolke @amtrack",
   "type": "module",
